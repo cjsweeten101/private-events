@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+  	<% flash.each do |k, v| %>
+  		<%= content_tag :div, v, class: "flash #{k}" %>
+  	<% end %>
+  	<p>
     <%= yield %>
   </body>
 </html>
