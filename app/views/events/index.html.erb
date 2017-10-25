@@ -1,0 +1,3 @@
+<% @events.each do |e| %>
+	<%= link_to e.title, e %>, created by <%= e.creator.username%> <p>
+<% end %>
