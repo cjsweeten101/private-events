@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 	delete '/logout', to: 'sessions#delete'
 	resources :users, only: [:new, :create, :show]
 	resources :events, only: [:index, :new, :create, :show]
+	post   '/attend', to: 'events#attend'
 end

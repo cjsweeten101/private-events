@@ -1,4 +1,4 @@
-<%= @event.title %>, created by <%= @event.creator.username%><p>
+<%= button_to "Attend", attend_url(id: @event.id) %> <p> <%= @event.title %>, created by <%= @event.creator.username%> <p>
 
 Date: <%= @event.date%><p>
 
