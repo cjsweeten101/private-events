@@ -1,9 +1,13 @@
 <%= @event.title %>, created by <%= @event.creator.username%><p>
 
-<%= @event.date%><p>
+Date: <%= @event.date%><p>
 
-<%= @event.location%><p>
+Location: <%= @event.location%><p>
 
-<%= @event.description%><p>
+Description: <%= @event.description%><p>
 
-Inivited users to come. . .
+Attendees: <p>
+
+<% @event.attendees.each do |a| %>
+	<%= a.username %> 
+<% end %>

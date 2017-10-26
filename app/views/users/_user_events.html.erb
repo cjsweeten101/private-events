@@ -1,3 +1,8 @@
-<% @user.created_events.each do |e| %>
-	Title: <%= link_to e.title, e %><p>
+<p>Attended Events:<P>
+<% @user.previous_events.each do |e| %>
+	<%= link_to e.title, e %>, created by <%= e.creator.username %>
+<% end %>
+<p>Upcoming Events:<p>
+<% @user.upcoming_events.each do |e| %>
+	<%= link_to e.title, e %>, created by <%= e.creator.username %>
 <% end %>
